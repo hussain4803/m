@@ -17,30 +17,37 @@
     <header class="site-header">
         <div class="container header-inner">
             <img class="brand-mark" src="assets/logo.png" alt="Saleh logo" onerror="this.style.display='none'">
-            <h1 class="brand-title">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h1>
+            <h1 class="brand-title" data-i18n-key="brand">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h1>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">AR</button>
         </div>
     </header>
 
     <main>
         <section class="hero" id="home">
             <div class="container hero-inner">
-                <h2 class="hero-title">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h2>
-                <p class="hero-tag">Creative Designer Portfolio</p>
-                <a class="cta" href="#contact" aria-label="See Portfolio">View My Work</a>
+                <h2 class="hero-title" data-i18n-key="brand">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h2>
+                <p class="hero-tag" data-i18n-key="tag">Creative Designer Portfolio</p>
+                <a class="cta" href="#gallery" data-i18n-key="cta" aria-label="See Portfolio">View My Work</a>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <h3 id="gallery-title" class="section-title" data-i18n-key="gallery">Gallery</h3>
+                <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+                <p class="gallery-hint" id="galleryHint" data-i18n-key="galleryHint">Add images to assets/gallery and list them in assets/gallery/manifest.json.</p>
             </div>
         </section>
 
         <section class="contact" id="contact" aria-labelledby="contact-title">
             <div class="container">
-                <h3 id="contact-title" class="section-title">Contact</h3>
+                <h3 id="contact-title" class="section-title" data-i18n-key="contact">Contact</h3>
                 <div class="contact-grid">
-                    <a class="contact-card" href="https://www.instagram.com/saleh4graphic/" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Saleh">
+                    <a class="contact-card" href="https://www.instagram.com/saleh4graphic/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
-                        <span class="contact-name">Saleh</span>
                     </a>
-                    <a class="contact-card" href="https://wa.me/9647725786302" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp - Saleh">
+                    <a class="contact-card" href="https://wa.me/9647725786302" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <span class="contact-name">Saleh</span>
                     </a>
                 </div>
             </div>
@@ -49,7 +56,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>© 2025 <strong>Saleh</strong> <span class="sep">|</span> <span class="arabic">صالح</span></p>
+            <p data-i18n-key="copyright">© 2025 <strong>Saleh</strong> <span class="sep">|</span> <span class="arabic">صالح</span></p>
         </div>
     </footer>
 
@@ -64,6 +71,76 @@
                 }
             }
         });
+
+        // Simple gallery loader. Provide a list of image file names in assets/gallery/manifest.json
+        (async function loadGallery(){
+            const grid = document.getElementById('galleryGrid');
+            if(!grid) return;
+            try{
+                const res = await fetch('assets/gallery/manifest.json',{cache:'no-cache'});
+                if(!res.ok) throw new Error('no manifest');
+                const files = await res.json();
+                if(Array.isArray(files) && files.length){
+                    files.forEach(function(file){
+                        const figure = document.createElement('figure');
+                        figure.className = 'gallery-item';
+                        const img = document.createElement('img');
+                        img.loading = 'lazy';
+                        img.src = 'assets/gallery/' + file;
+                        img.alt = 'Saleh portfolio image';
+                        figure.appendChild(img);
+                        grid.appendChild(figure);
+                    });
+                    const hint = document.getElementById('galleryHint');
+                    if(hint) hint.style.display = 'none';
+                }
+            }catch(err){
+                // Keep hint visible if manifest not found
+            }
+        })();
+
+        // Basic i18n toggle (EN/AR)
+        (function i18n(){
+            const strings = {
+                en: {
+                    brand: 'Saleh <span class="sep">|</span> <span class="arabic">صالح</span>',
+                    tag: 'Creative Designer Portfolio',
+                    cta: 'View My Work',
+                    contact: 'Contact',
+                    gallery: 'Gallery',
+                    galleryHint: 'Add images to assets/gallery and list them in assets/gallery/manifest.json.',
+                    copyright: '© 2025 <strong>Saleh</strong> <span class="sep">|</span> <span class="arabic">صالح</span>'
+                },
+                ar: {
+                    brand: 'صالح <span class="sep">|</span> <span>Saleh</span>',
+                    tag: 'ملف مصمم إبداعي',
+                    cta: 'شاهد أعمالي',
+                    contact: 'تواصل',
+                    gallery: 'المعرض',
+                    galleryHint: 'أضف الصور إلى assets/gallery وضع أسماءها في assets/gallery/manifest.json.',
+                    copyright: '© 2025 <strong>صالح</strong> <span class="sep">|</span> <span>Saleh</span>'
+                }
+            };
+            const toggle = document.getElementById('langToggle');
+            function setLang(lang){
+                const dict = strings[lang] || strings.en;
+                document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                document.querySelectorAll('[data-i18n-key]').forEach(function(el){
+                    var key = el.getAttribute('data-i18n-key');
+                    if(dict[key] !== undefined){ el.innerHTML = dict[key]; }
+                });
+                if(toggle){ toggle.textContent = lang === 'ar' ? 'EN' : 'AR'; }
+            }
+            if(toggle){
+                toggle.addEventListener('click', function(){
+                    const isAr = document.documentElement.lang === 'ar';
+                    setLang(isAr ? 'en' : 'ar');
+                });
+            }
+            // default language EN
+            setLang('en');
+        })();
     </script>
 </body>
 </html>

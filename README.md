@@ -7,6 +7,7 @@ A minimal, responsive landing page for the designer Saleh. Built with pure HTML/
 - `index.html` — markup with Header, Hero, Contact, and Footer
 - `styles.css` — theme styles (colors: #495E35 background, #d4ad5e accent)
 - `assets/logo.png` — site logo used in header and favicon (add yours)
+- `assets/gallery/manifest.json` — list of image file names to show in the gallery
 
 ## Add your logo
 
@@ -29,3 +30,17 @@ A minimal, responsive landing page for the designer Saleh. Built with pure HTML/
 ## License
 
 You may use and modify this template freely.
+
+## Gallery
+
+Place your work images in `assets/gallery/` and list them inside `assets/gallery/manifest.json` as a JSON array of file names, for example:
+
+```json
+[
+  "work-01.jpg",
+  "work-02.png",
+  "work-03.webp"
+]
+```
+
+The page will load these images automatically. Filenames are relative to `assets/gallery/`.

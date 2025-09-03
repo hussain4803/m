@@ -32,6 +32,8 @@ body{
 .brand-title{margin:0;font-weight:900;letter-spacing:.5px;text-transform:uppercase}
 .brand-title .sep{color:var(--accent);margin:0 .35ch}
 .arabic{font-weight:900}
+.lang-toggle{margin-left:auto;margin-right:0;background:transparent;border:2px solid var(--accent);color:var(--accent);font-weight:800;border-radius:999px;padding:8px 12px;cursor:pointer}
+.lang-toggle:hover{background:rgba(212,173,94,.12)}
 
 /* Hero */
 .hero{display:grid;place-items:center;padding:96px 0 72px}
@@ -47,6 +49,13 @@ body{
 }
 .cta:hover,.cta:focus{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,173,94,.25);background:transparent;color:var(--accent)}
 
+/* Gallery */
+.gallery{padding:42px 0;border-top:2px solid var(--accent)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gallery-item{margin:0;border-radius:10px;overflow:hidden;border:2px solid var(--accent);background:#3e4f2f}
+.gallery-item img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+.gallery-hint{color:var(--muted);margin-top:10px;font-size:.95rem}
+
 /* Contact */
 .section-title{font-size:clamp(1.6rem,4.5vw,2.2rem);margin:0 0 22px;font-weight:900}
 .contact{padding:42px 0 84px;border-top:2px solid var(--accent)}
@@ -57,7 +66,7 @@ body{
   color:var(--text);text-decoration:none;font-weight:800;font-size:clamp(1.05rem,2.5vw,1.25rem);
   transition:transform .15s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
 }
-.contact-card i{font-size:1.35em;color:var(--accent)}
+.contact-card i{font-size:1.8em;color:var(--accent)}
 .contact-card:hover,.contact-card:focus{background:rgba(212,173,94,.12);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
 .contact-card.pressed{transform:scale(.98)}
 
