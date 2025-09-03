@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saleh | صالح — Portfolio</title>
+    <meta name="description" content="Saleh | صالح — Creative Designer Portfolio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <script defer src="https://kit.fontawesome.com/4c60f6f0b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <img class="brand-mark" src="assets/logo.png" alt="Saleh logo" onerror="this.style.display='none'">
+            <h1 class="brand-title">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <h2 class="hero-title">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h2>
+                <p class="hero-tag">Creative Designer Portfolio</p>
+                <a class="cta" href="#contact" aria-label="See Portfolio">View My Work</a>
+            </div>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h3 id="contact-title" class="section-title">Contact</h3>
+                <div class="contact-grid">
+                    <a class="contact-card" href="https://www.instagram.com/saleh4graphic/" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Saleh">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="contact-name">Saleh</span>
+                    </a>
+                    <a class="contact-card" href="https://wa.me/9647725786302" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp - Saleh">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span class="contact-name">Saleh</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 <strong>Saleh</strong> <span class="sep">|</span> <span class="arabic">صالح</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Small helper to add a pressed visual on keyboard navigation for accessibility
+        document.addEventListener('keydown', function(e){
+            if(e.key === 'Enter'){
+                const active = document.activeElement;
+                if(active && active.classList.contains('contact-card')){
+                    active.classList.add('pressed');
+                    setTimeout(()=>active.classList.remove('pressed'),150);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
