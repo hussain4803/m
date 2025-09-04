@@ -85,6 +85,11 @@ body{
 /* Footer */
 .site-footer{border-top:2px solid var(--accent);padding:18px 0 36px;color:var(--muted);text-align:center}
 .site-footer .sep{color:var(--accent)}
+.footer-credits{margin-top:8px;display:flex;gap:10px;align-items:center;justify-content:center;color:var(--muted)}
+.footer-credits small{font-size:.72rem;letter-spacing:.3px}
+.footer-icons{display:inline-flex;gap:8px;margin-left:8px}
+.footer-icon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px}
+.footer-icon svg{width:100%;height:100%}
 
 /* Responsive */
 @media (max-width:700px){
