@@ -14,7 +14,7 @@ body{
   font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
   color:var(--text);
   background:var(--bg);
-  line-height:1.4;
+  line-height:1.55;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
@@ -28,47 +28,48 @@ body{
   backdrop-filter:saturate(140%) blur(6px);
   border-bottom:2px solid var(--accent);
 }
-.header-inner{display:flex;align-items:center;justify-content:center;gap:14px;padding:16px 0}
+.header-inner{display:flex;align-items:center;justify-content:center;gap:14px;padding:18px 0}
 .brand-mark{width:44px;height:44px;object-fit:contain;border-radius:6px;border:2px solid var(--accent);padding:4px;background:var(--primary)}
-.brand-title{margin:0;font-weight:900;letter-spacing:.5px;text-transform:uppercase}
+.brand-title{margin:0;font-weight:900;letter-spacing:.6px;text-transform:uppercase;color:var(--primary)}
 .brand-title .sep{color:var(--accent);margin:0 .35ch}
 .arabic{font-weight:900}
 .lang-toggle{margin-left:auto;margin-right:0;background:transparent;border:2px solid var(--accent);color:var(--accent);font-weight:800;border-radius:999px;padding:8px 12px;cursor:pointer}
 .lang-toggle:hover{background:rgba(127,183,126,.12)}
 
 /* Hero */
-.hero{display:grid;place-items:center;padding:96px 0 72px}
-.hero-title{font-size:clamp(2.2rem,7vw,4.2rem);margin:0;text-align:center;font-weight:900;letter-spacing:.5px}
+.hero{display:grid;place-items:center;padding:104px 0 80px}
+.hero-title{font-size:clamp(2.4rem,7vw,4.5rem);margin:0;text-align:center;font-weight:900;letter-spacing:.6px;color:var(--primary)}
 .hero-title .sep{color:var(--accent)}
-.hero-tag{margin:18px 0 28px;text-align:center;color:var(--muted);font-size:clamp(1rem,2.6vw,1.25rem);font-weight:700}
+.hero-tag{margin:18px 0 32px;text-align:center;color:var(--muted);font-size:clamp(1rem,2.4vw,1.3rem);font-weight:700}
 .cta{
   display:inline-block;text-decoration:none;
   background:var(--accent);color:#2E2A27;
   padding:15px 28px;border-radius:999px;font-weight:900;letter-spacing:.4px;
   border:2px solid var(--accent);
-  transition:transform .15s ease, box-shadow .2s ease, background .2s ease,color .2s ease;
+  transition:transform .15s ease, box-shadow .25s ease, background .2s ease,color .2s ease;
 }
 .cta:hover,.cta:focus{transform:translateY(-2px);box-shadow:0 10px 24px rgba(127,183,126,.25);background:transparent;color:var(--accent)}
 
 /* Gallery */
-.gallery{padding:42px 0;border-top:2px solid var(--accent)}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.gallery-item{margin:0;border-radius:10px;overflow:hidden;border:2px solid var(--accent);background:var(--primary)}
-.gallery-item img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+.gallery{padding:56px 0;border-top:2px solid var(--accent)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.gallery-item{margin:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:var(--primary);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.gallery-item img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;transition:transform .3s ease}
+.gallery-item:hover img{transform:scale(1.035)}
 .gallery-hint{color:var(--muted);margin-top:10px;font-size:.95rem}
 
 /* Contact */
 .section-title{font-size:clamp(1.6rem,4.5vw,2.2rem);margin:0 0 22px;font-weight:900}
-.contact{padding:42px 0 84px;border-top:2px solid var(--accent)}
+.contact{padding:48px 0 88px;border-top:2px solid var(--accent)}
 .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .contact-card{
   display:flex;align-items:center;justify-content:center;gap:12px;
-  border:2px solid var(--accent);border-radius:16px;padding:22px 18px;
+  border:2px solid var(--accent);border-radius:16px;padding:22px 18px; background:rgba(255,255,255,0.02);
   color:var(--text);text-decoration:none;font-weight:800;font-size:clamp(1.05rem,2.5vw,1.25rem);
   transition:transform .15s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 .contact-card i{font-size:1.8em;color:var(--accent)}
-.contact-card .icon{width:28px;height:28px}
+.contact-card .icon{width:32px;height:32px}
 .contact-card:hover,.contact-card:focus{background:rgba(127,183,126,.12);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
 .contact-card.pressed{transform:scale(.98)}
 
