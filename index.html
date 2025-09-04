@@ -27,7 +27,10 @@
             <div class="container hero-inner">
                 <h2 class="hero-title" data-i18n-key="brand">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h2>
                 <p class="hero-tag" data-i18n-key="tag">Creative Designer Portfolio</p>
-                <a class="cta" href="#gallery" data-i18n-key="cta" aria-label="See Portfolio">View My Work</a>
+                <div class="hero-actions">
+                    <a class="cta" href="https://www.instagram.com/saleh4graphic/" target="_blank" rel="noopener noreferrer" data-i18n-key="cta" aria-label="See Portfolio on Instagram">View My Work</a>
+                    <a class="cta cta-secondary" href="#contact" data-i18n-key="ctaContact" aria-label="Go to contact">Contact</a>
+                </div>
             </div>
         </section>
 
@@ -43,24 +46,6 @@
             <div class="container">
                 <h3 id="contact-title" class="section-title" data-i18n-key="contact">Contact</h3>
                 <div class="contact-grid">
-                    <a class="contact-card" href="https://www.instagram.com/saleh4graphic/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg class="icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <title>Instagram</title>
-                            <defs>
-                                <linearGradient id="igGradientFull" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0%" stop-color="#F58529"/>
-                                    <stop offset="25%" stop-color="#FEDA77"/>
-                                    <stop offset="50%" stop-color="#DD2A7B"/>
-                                    <stop offset="75%" stop-color="#8134AF"/>
-                                    <stop offset="100%" stop-color="#515BD4"/>
-                                </linearGradient>
-                            </defs>
-                            <rect x="24" y="24" width="400" height="400" rx="90" ry="90" fill="url(#igGradientFull)"/>
-                            <circle cx="224" cy="224" r="80" fill="none" stroke="#fff" stroke-width="40"/>
-                            <circle cx="328" cy="120" r="20" fill="#fff"/>
-                            <rect x="24" y="24" width="400" height="400" rx="90" ry="90" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="8"/>
-                        </svg>
-                    </a>
                     <a class="contact-card" href="https://wa.me/9647725786302" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <svg class="icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <title>WhatsApp</title>
@@ -125,6 +110,7 @@
                     brand: 'Saleh <span class="sep">|</span> <span class="arabic">صالح</span>',
                     tag: 'Creative Designer Portfolio',
                     cta: 'View My Work',
+                    ctaContact: 'Contact',
                     contact: 'Contact',
                     gallery: 'Gallery',
                     galleryHint: 'Add images to assets/gallery and list them in assets/gallery/manifest.json.',
@@ -134,6 +120,7 @@
                     brand: 'صالح <span class="sep">|</span> <span>Saleh</span>',
                     tag: 'ملف مصمم إبداعي',
                     cta: 'شاهد أعمالي',
+                    ctaContact: 'تواصل معي',
                     contact: 'تواصل',
                     gallery: 'المعرض',
                     galleryHint: 'أضف الصور إلى assets/gallery وضع أسماءها في assets/gallery/manifest.json.',
