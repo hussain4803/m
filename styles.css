@@ -65,22 +65,13 @@ body{
 
 /* Skills */
 .skills{padding:56px 0;border-top:2px solid var(--accent)}
-.skills-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.skill-card{border:2px solid var(--accent);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);box-shadow:0 0 12px rgba(212,173,94,.55)}
-.skill-icon{width:60px;height:60px;display:grid;place-items:center;background:var(--accent);color:#ffffff;border-radius:999px;font-size:28px;margin:0 auto 14px;box-shadow:0 0 10px rgba(212,173,94,.6)}
-.skill-title{text-align:center;margin:0 0 12px;font-weight:900;color:var(--primary)}
-.skill-desc{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0}
-.skill-desc .word{display:inline-block;background:transparent;border:1px solid var(--accent);padding:6px 10px;border-radius:10px;color:#ffffff;font-weight:700;transition:transform .25s ease, background .25s ease;box-shadow:0 0 8px rgba(212,173,94,.6)}
-.skill-card:hover .word{animation:word-bounce .8s ease var(--d) 1;}
-.skill-desc .word:nth-child(1){--d:0s}
-.skill-desc .word:nth-child(2){--d:.05s}
-.skill-desc .word:nth-child(3){--d:.1s}
-.skill-desc .word:nth-child(4){--d:.15s}
-.skill-desc .word:nth-child(5){--d:.2s}
-.skill-desc .word:nth-child(6){--d:.25s}
-.skill-desc .word:nth-child(7){--d:.3s}
-.skill-desc .word:nth-child(8){--d:.35s}
-@keyframes word-bounce{0%{transform:translateY(0)}35%{transform:translateY(-6px)}70%{transform:translateY(2px)}100%{transform:translateY(0)}}
+.skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.skill-card{border:2px solid var(--accent);border-radius:18px;padding:22px;background:#0a0a0a;box-shadow:0 0 12px rgba(212,173,94,.45)}
+.skill-badge{width:76px;height:76px;display:grid;place-items:center;background:var(--accent);color:#000;border-radius:999px;font-size:34px;margin:14px auto 16px;box-shadow:0 0 12px rgba(212,173,94,.6)}
+.skill-title{text-align:center;margin:0 0 16px;font-weight:900;color:#ffffff;font-size:1.3rem}
+.skill-block{background:#121212;border:2px solid var(--accent);border-radius:12px;padding:12px 14px;margin:10px 0;box-shadow:0 0 8px rgba(212,173,94,.4)}
+.block-title{color:var(--accent);font-weight:800;margin:0 0 6px;font-size:.95rem}
+.block-body{color:#ffffff;opacity:.92;margin:0}
 
 /* Contact */
 .section-title{font-size:clamp(1.6rem,4.5vw,2.2rem);margin:0 0 22px;font-weight:900}
@@ -112,6 +103,9 @@ body{
   .header-inner{padding:12px 0}
   .brand-mark{width:112px;height:84px}
   .contact-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cta{width:100%;text-align:center}
 }
 
 
