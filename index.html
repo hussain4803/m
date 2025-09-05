@@ -16,9 +16,14 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <img class="brand-mark" src="assets/logo.png" alt="Saleh logo" onerror="this.style.display='none'">
-            <h1 class="brand-title" data-i18n-key="brand">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h1>
+            <div class="brand-left">
+                <img class="brand-mark" src="assets/logo.png" alt="Saleh logo" onerror="this.style.display='none'">
+                <h1 class="brand-title" data-i18n-key="brand_en">Saleh</h1>
+            </div>
             <button class="lang-toggle" id="langToggle" aria-label="Switch language">AR</button>
+            <div class="brand-right">
+                <h1 class="brand-title-ar" data-i18n-key="brand_ar">صالح</h1>
+            </div>
         </div>
     </header>
 
@@ -210,6 +215,8 @@
             const strings = {
                 en: {
                     brand: 'Saleh <span class="sep">|</span> <span class="arabic">صالح</span>',
+                    brand_en: 'Saleh',
+                    brand_ar: 'صالح',
                     tag: 'Creative Designer Portfolio',
                     cta: 'View My Work',
                     ctaContact: 'Contact',
@@ -241,6 +248,8 @@
                 },
                 ar: {
                     brand: 'صالح <span class="sep">|</span> <span>Saleh</span>',
+                    brand_en: 'صالح',
+                    brand_ar: 'Saleh',
                     tag: 'ملف مصمم إبداعي',
                     cta: 'شاهد أعمالي',
                     ctaContact: 'تواصل معي',
