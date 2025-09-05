@@ -16,14 +16,9 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <div class="brand-left">
-                <img class="brand-mark" src="assets/logo.png" alt="Saleh logo" onerror="this.style.display='none'">
-                <h1 class="brand-title" data-i18n-key="brand_en">Saleh</h1>
-            </div>
+            <img class="brand-mark" src="assets/logo.png" alt="Saleh logo" onerror="this.style.display='none'">
+            <h1 class="brand-title" data-i18n-key="brand">Saleh <span class="sep">|</span> <span class="arabic">صالح</span></h1>
             <button class="lang-toggle" id="langToggle" aria-label="Switch language">AR</button>
-            <div class="brand-right">
-                <h1 class="brand-title-ar" data-i18n-key="brand_ar">صالح</h1>
-            </div>
         </div>
     </header>
 
@@ -132,7 +127,11 @@
                 <h3 id="contact-title" class="section-title" data-i18n-key="contact">Contact</h3>
                 <div class="contact-grid">
                     <a class="contact-card" href="https://wa.me/9647725786302" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <img class="icon" src="assets/whatsapp-icon.png" alt="WhatsApp" onerror="this.style.display='none'">
+                        <svg class="icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <title>WhatsApp</title>
+                            <circle cx="224" cy="224" r="200" fill="#25D366"/>
+                            <path fill="#fff" d="M318.4 290.1c-5.2-2.6-30.7-15.2-35.4-16.9-4.7-1.8-8.1-2.6-11.6 2.6-3.5 5.2-13.3 16.9-16.3 20.4-3 3.5-6 3.9-11.2 1.3-5.2-2.6-21.4-7.9-40.6-25.3-14.9-13.5-25-30.2-28-35.3-3-5.2-.1-7.9 2.3-10.5 2.4-2.6 5.2-6.9 7.7-10.4 2.5-3.5 3.3-6.1 5-10.4 1.7-4.3.9-7.8-.4-10.4-1.3-2.6-11.9-28.8-16.3-39.5-4.3-10.4-8.7-9-11.9-9.2h-10.2c-3.5 0-9.5 1.3-14.7 6.5-5.2 5.2-19.2 18.9-19.2 46.2 0 27.2 19.7 53.5 22.5 57.2 2.8 3.7 38.7 59.1 94 80.4 13.1 5.2 23.3 8.3 31.2 10.7 13.1 4.1 24.9 3.3 34.4 2 10.5-1.6 33.3-13.1 38.1-25.8 4.7-12.7 4.7-23.7 3.3-25.9-1.3-2.2-4.8-3.6-10-6.1z"/>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -215,8 +214,6 @@
             const strings = {
                 en: {
                     brand: 'Saleh <span class="sep">|</span> <span class="arabic">صالح</span>',
-                    brand_en: 'Saleh',
-                    brand_ar: 'صالح',
                     tag: 'Creative Designer Portfolio',
                     cta: 'View My Work',
                     ctaContact: 'Contact',
@@ -248,8 +245,6 @@
                 },
                 ar: {
                     brand: 'صالح <span class="sep">|</span> <span>Saleh</span>',
-                    brand_en: 'صالح',
-                    brand_ar: 'Saleh',
                     tag: 'ملف مصمم إبداعي',
                     cta: 'شاهد أعمالي',
                     ctaContact: 'تواصل معي',
