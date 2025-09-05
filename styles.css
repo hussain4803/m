@@ -77,7 +77,8 @@ body{
 .skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .skill-card{border:2px solid var(--accent);border-radius:18px;padding:22px;background:#0a0a0a;box-shadow:0 0 12px rgba(212,173,94,.45)}
 .skill-card:hover{transform:translateY(-4px);box-shadow:0 0 18px rgba(212,173,94,.75)}
-.skill-badge{width:76px;height:76px;display:grid;place-items:center;background:var(--accent);color:#000;border-radius:999px;font-size:34px;margin:14px auto 16px;box-shadow:0 0 12px rgba(212,173,94,.6)}
+.skill-badge{width:76px;height:76px;display:grid;place-items:center;background:var(--accent);color:#000;border-radius:999px;margin:14px auto 16px;box-shadow:0 0 12px rgba(212,173,94,.6)}
+.badge-icon{width:40px;height:40px;display:block;color:#000}
 .skill-badge:hover{transform:scale(1.05) rotate(-2deg)}
 .skill-title{text-align:center;margin:0 0 16px;font-weight:900;color:#ffffff;font-size:1.3rem}
 .skill-block{background:#121212;border:2px solid var(--accent);border-radius:12px;padding:12px 14px;margin:10px 0;box-shadow:0 0 8px rgba(212,173,94,.4)}
